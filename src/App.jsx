@@ -1,24 +1,55 @@
-import { useState } from "react";
-import userData from "./common/userData.json";
-import Profile from "./components/Profile/Profile";
-import friends from "./common/friends.json";
-import FriendList from "./components/FriendList/FriendList";
-import transactions from "./common/transactions.json";
-import TransactionHistory from "./components/TransactionHistory/TransactionHistory.jsx";
-
 const App = () => {
   return (
-    <>
-      <Profile
-        name={userData.username}
-        tag={userData.tag}
-        location={userData.location}
-        image={userData.avatar}
-        stats={userData.stats}
-      />
-      <FriendList friends={friends} />
-      <TransactionHistory items={transactions} />
-    </>
+    <div>
+      <header>
+        <div>
+          <h1>Hello world</h1>
+        </div>
+        <hr />
+      </header>
+      <section>
+        <h2>React</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+          optio est possimus totam accusantium ex quos nostrum quaerat, odio
+          tempora provident, quo a dicta alias nam doloremque voluptatem
+          consequatur delectus!
+        </p>
+        <ul>
+          <li>Hello</li>
+          <li>Hello</li>
+          <li>Hello</li>
+        </ul>
+
+        <div>
+          <button>Click</button>
+          <button>Login</button>
+          <button>Exit</button>
+        </div>
+        <h2>About me</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque
+          quaerat totam cupiditate voluptate eligendi necessitatibus maxime
+          dolorem, modi aspernatur sequi et autem perferendis porro, veritatis
+          eum dolore officia optio facilis!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque
+          quaerat totam cupiditate voluptate eligendi necessitatibus maxime
+          dolorem, modi aspernatur sequi et autem perferendis porro, veritatis
+          eum dolore officia optio facilis!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque
+          quaerat totam cupiditate voluptate eligendi necessitatibus maxime
+          dolorem, modi aspernatur sequi et autem perferendis porro, veritatis
+          eum dolore officia optio facilis!
+        </p>
+      </section>
+      <footer>
+        <h2>All right</h2>
+      </footer>
+    </div>
   );
 };
 
