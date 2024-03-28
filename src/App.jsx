@@ -30,14 +30,16 @@ const App = () => {
 
   return (
     <div>
-      <Header />
+      {/* <Header logoText={22} /> */}
+      {/* <Header logoText="44" /> */}
+      <Header logoText={"React"} />
       <Modal title="MODLE TITLE">
         <h2>Sell fruit</h2>
         <button>OK</button>
         <button>Sell</button>
       </Modal>
       <Modal title="TITLE MODAL"></Modal>
-      <Profile user={userData} />
+      <Profile user={userData} message="+" />
       <WelcomeSection />
       <AboutMe />
       <Footer />
