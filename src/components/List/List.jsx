@@ -1,9 +1,12 @@
 import Button from "../Button/Button";
 
-const List = ({ title = "Default section", data }) => {
+const List = ({ title = "Default section", data, online }) => {
   return (
     <div>
       <h2>{title}</h2>
+
+      <h2>{online && "Props from app const ONLINE"}</h2>
+
       <ul>
         {data.map((item) => (
           <li key={item.id}>
