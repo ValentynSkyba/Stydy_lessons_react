@@ -7,6 +7,7 @@ import Button from "./components/Button/Button";
 import List from "./components/List/List";
 import Profile from "./components/Profile/Profile";
 import userData from "./assets/user.json";
+import Modal from "./components/Modal/Modal";
 
 const App = () => {
   const titleBtn = "Please click me ";
@@ -30,6 +31,12 @@ const App = () => {
   return (
     <div>
       <Header />
+      <Modal title="MODLE TITLE">
+        <h2>Sell fruit</h2>
+        <button>OK</button>
+        <button>Sell</button>
+      </Modal>
+      <Modal title="TITLE MODAL"></Modal>
       <Profile user={userData} />
       <WelcomeSection />
       <AboutMe />
