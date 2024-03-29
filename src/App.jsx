@@ -8,6 +8,8 @@ import List from "./components/List/List";
 import Profile from "./components/Profile/Profile";
 import userData from "./assets/user.json";
 import Modal from "./components/Modal/Modal";
+import "./index.css";
+import "modern-normalize";
 
 const App = () => {
   const titleBtn = "Please click me ";

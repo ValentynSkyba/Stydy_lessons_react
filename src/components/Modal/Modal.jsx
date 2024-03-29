@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const Modal = ({ title, children }) => {
   return (
     <div>
@@ -6,6 +8,11 @@ const Modal = ({ title, children }) => {
       <div>{children}</div>
     </div>
   );
+};
+
+Modal.propTypes = {
+  title: PropTypes.string,
+  children: PropTypes.node,
 };
 
 export default Modal;
