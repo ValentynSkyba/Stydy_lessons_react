@@ -48,9 +48,11 @@ const App = () => {
       <Text text="This is text from props" />
       <Text apple="React is apple" />
       <Text text="Cool level" />
-      <Button title="Apple" />
-      <Button title="Cherry" />
-      <Button title={titleBtn} count={22} />
+      <Button title="">Apple</Button>
+      {/* <Button title="Cherry" /> зламоно бо у Батоні використано чаилд Єпл виправлено*/}
+      <Button title={titleBtn} count={22}>
+        {titleBtn}
+      </Button>
       <List data={filmsData} />
       <List data={ToDolist} title="Todos section" />
       {online && <h1>Welcome!</h1>}

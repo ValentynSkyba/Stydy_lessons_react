@@ -1,19 +1,32 @@
 import PropTypes from "prop-types";
+import s from "./Profile.module.css";
+import clsx from "clsx";
 
 const Profile = ({ user, message }) => {
   const { firstName, lastName, age, email, image, address, gender } = user;
   return (
-    <div>
-      {message && <h1>Hello {firstName}</h1>}
-      ,<img width="200" src={image} alt="user avatar" />
-      <h1>
-        {firstName} {lastName}
-      </h1>
-      <p>{age}</p>
-      <p>Status: {age > 18 ? "Adult" : "Young"}</p>
-      <p>{email}</p>
-      <p>Address: {address.city}</p>
-      <p>Gender: {gender}</p>
+    <div className={s.wrapper}>
+      <div className={s.card}>
+        {message && <h1>Hello {firstName}</h1>}
+        <div className={s.img_wrapper}>
+          <img width="200" src={image} alt="user avatar" />
+        </div>
+        <h1 className={s.name}>
+          {firstName} {lastName}
+        </h1>
+        <p>{age}</p>
+        {/* {Інтерполяція стилів} */}
+        {/* <p className={`${s.status} ${age > 18 ? s.green : s.red}`}>
+          Status: {age > 18 ? "Adult" : "Young"}
+        </p> */}
+        <p className={clsx(s.status, age > 18 ? s.green : s.red)}>
+          Status: {age > 18 ? "Adult" : "Young"}
+          {/* {Контокацінація стилів} */}
+        </p>
+        <p>{email}</p>
+        <p>Address: {address.city}</p>
+        <p>Gender: {gender}</p>
+      </div>
     </div>
   );
 };
